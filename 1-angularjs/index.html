@@ -6,11 +6,21 @@
     <script src="angular.min.js"></script>
     <script src="script.js"></script>
     <title>Angularjs</title>
+    <style>
+        div{
+            border: 2px solid #fff;
+            border-radius: 3px;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
-<body  ng-controller="controller" style="background-color: blanchedalmond; color: blue;">
-    <div ng-controller="myController">Angular message: {{message}}</div>
-    <div>First Name: {{employe.firstName}}</div>
-    <div>Last Name: {{employe.lastName}}</div>
-    <div>Age: {{employe.age}}</div>
+<body ng-controller="controller2" style="background-color: #111; color: #fff;">
+    <div >Angular message: {{message}}</div>
+    <div>First Name: {{emp.firstName}}</div>
+    <div>Last Name: {{emp.lastName}}</div>
+    <div>Age: {{emp.age}}</div>
 </body>
 </html>
