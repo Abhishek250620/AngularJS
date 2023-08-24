@@ -20,3 +20,27 @@ app.controller("controller2", function ($scope) {
     ];
     $scope.emps = emp;
 })
+
+app.controller("controller3", function ($scope) {
+    var countries = [
+        {
+            name: "India",
+            cities: [
+                { name: "Bangalore" }, { name: "chennai" }
+            ]
+        },
+        {
+            name: "US",
+            cities: [
+                { name: "New York" }, { name: "Chikago" },{name:"LA"}
+            ]
+        },
+        {
+            name: "UK",
+            cities: [
+                { name: "lknk" }, { name: "dfvfv" }
+            ]
+        }
+    ];
+    $scope.country = countries;
+})
