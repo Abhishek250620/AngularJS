@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myModule">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<script src="angular.min.js"></script>
-<script src="script1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script1.js"></script>
 </head>
-<body ng-controller="myController">
-    <div>FirstName: {{emp.firstName}}</div>
-    <div>LastName: {{emp.lastName}}</div>
-    <div>Age: {{emp.age}}</div>
+
+<body ng-controller="myCompany">
+    <div>Name: {{company.name}}</div>
+    <div>Location: {{company.location}}</div>
+    <div><img ng-src="{{company.logo}}" alt=""></div>
+    <hr>
+    <div ng-controller="myController1">
+        <h3>{{name}}</h3>
+        <input type="text" ng-model="name.name">
+        <h6>Hii {{name}}</h6>
+    </div>
 </body>
+
 </html>

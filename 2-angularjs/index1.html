@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="module1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="script1.js"></script>
+    <style>
+        input{
+            margin: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body ng-controller="controller1">
+    <h2>Welcome {{person.name}}</h2>
+    <div style="display: inline-block;">
+   <input type="text" placeholder="Enter Name" ng-model="person.name">
+   <input type="text" placeholder="Enter Gender" ng-model="person.gender">
+   <input type="text" placeholder="Enter Age" ng-model="person.age">
+</div>
+    <h4>Name: {{person.name}}</h4>
+    <h4>Gender: {{person.gender}}</h4>
+    <h4>Age: {{person.age}}</h4>
+</body>
+</html>
