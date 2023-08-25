@@ -14,6 +14,22 @@
         <h3>Welcome {{name}}</h3>
         <input type="text" placeholder="Enter your Name" ng-model="name">
     </div>
+    <hr>
+    <div>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="emp in emps">
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.role}}</td>
+                    <td>{{emp.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
-
 </html>
