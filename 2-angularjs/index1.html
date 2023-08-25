@@ -45,7 +45,7 @@
         </ul>
     </div>
     <hr>
-    <div>
+    <!-- <div>
         <table>
             <thead>
                 <tr>
@@ -66,6 +66,30 @@
             </tbody>
         </table>
     </div>
-    <hr>
+    <hr> -->
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Like/DisLike</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="insta in instagram">
+                    <td>{{insta.post}}</td>
+                    <td>{{insta.like}}</td>
+                    <td>{{insta.dislike}}</td>
+                    <td><input type="submit" value="Like" ng-click="incLike(insta)">
+                        <input type="submit" value="DisLike" ng-click="incDisLike(insta)">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </body>
+
 </html>
