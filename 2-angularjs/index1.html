@@ -4,64 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TwoWayBinding</title>
+    <title>Document</title>
     <script src="angular.min.js"></script>
     <script src="script1.js"></script>
-    <style>
-        input {
-            margin: 10px;
-            display: block;
-        }
-
-        td,
-        th {
-            border: 1px solid #000;
-        }
-    </style>
 </head>
 
 <body ng-controller="controller1">
-    <h2>Welcome {{person.name}}</h2>
-    <div style="display: inline-block;">
-        <input type="text" placeholder="Enter Name" ng-model="person.name">
-        <input type="text" placeholder="Enter Gender" ng-model="person.gender">
-        <input type="text" placeholder="Enter Role" ng-model="person.role">
-        <input type="text" placeholder="Enter Age" ng-model="person.age">
-    </div>
-    <h4>Name: {{person.name}}</h4>
-    <h4>Gender: {{person.gender}}</h4>
-    <h4>Role: {{person.role}}</h4>
-    <h4>Age: {{person.age}}</h4>
-    <hr>
-    <div ng-controller="controller2">
-        <table style="border: 1px solid #000;">
-            <thead>
-                <tr>
-                    <th>FirstName</th>
-                    <th>LastName</th>
-                    <th>Role</th>
-                    <th>Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="emp in emps">
-                    <td>{{emp.firstName}}</td>
-                    <td>{{emp.lastName}}</td>
-                    <td>{{emp.role}}</td>
-                    <td>{{emp.age}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <hr>
-    <div ng-controller="controller3">
-        <ul style="list-style: number;">
-            <li ng-repeat="countr in country">{{countr.name}} ({{$index}})
-                <ul>
-                    <li ng-repeat="city in countr.cities">{{city.name}} ({{$index}}) parent-{{$parent.$index}}</li>
-                </ul>
-            </li>
-        </ul>
+    <div>
+        <h3>Welcome {{name}}</h3>
+        <input type="text" placeholder="Enter your Name" ng-model="name">
     </div>
 </body>
 
