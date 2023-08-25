@@ -31,5 +31,16 @@
             </tbody>
         </table>
     </div>
+    <hr>
+    <div>
+        <ul>
+            <li ng-repeat="country in countries"> {{country.name}}
+                <ul>
+                    <li ng-repeat="city in country.cities">{{city.name}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <hr>
 </body>
 </html>
