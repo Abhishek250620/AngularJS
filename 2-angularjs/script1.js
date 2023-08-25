@@ -70,4 +70,15 @@ var app=angular.module("module1",[]).controller("controller1",function($scope){
     $scope.incDisLike = function(insta){
        insta.dislike++;
     }
+
+    let table=[
+        {name:"Pavan1",DOJ:new Date("Jan 01 2023"),salary:4523.34},
+        {name:"Pavan2",DOJ:new Date("Jan 01 2023"),salary:4523.34},
+        {name:"Pavan3",DOJ:new Date("Jan 01 2023"),salary:4523.34},
+        {name:"Pavan4",DOJ:new Date("Jan 01 2023"),salary:4523.34},
+        {name:"Pavan5",DOJ:new Date("Jan 01 2023"),salary:4523.34}
+    ]
+    $scope.table=table;
+
+    $scope.rowlimit=table.length;
 })

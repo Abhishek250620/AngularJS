@@ -89,7 +89,25 @@
             </tbody>
         </table>
     </div>
-
+    <hr>
+    <div>
+        Number of rows : <input type="number" step="1" min="0" max="5" ng-model="rowlimit">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>DOJ</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="table in table | limitTo:rowlimit">
+                    <td>{{table.name | uppercase}}</td>
+                    <td>{{table.DOJ|date}}</td>
+                    <td>{{table.salary | number:1}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
-
 </html>
