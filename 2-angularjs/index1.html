@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AngularJS</title>
     <script src="angular.min.js"></script>
     <script src="script1.js"></script>
 </head>
 
 <body ng-controller="controller1">
     <div>
+        TwoWay Binding - ng-model
         <h3>Welcome {{name}}</h3>
         <input type="text" placeholder="Enter your Name" ng-model="name">
     </div>
     <hr>
     <div>
+        ng-repeat - Table
         <table>
             <thead>
                 <th>Name</th>
@@ -33,6 +35,7 @@
     </div>
     <hr>
     <div>
+        ng-repeat - list
         <ul>
             <li ng-repeat="country in countries"> {{country.name}}
                 <ul>
@@ -40,6 +43,28 @@
                 </ul>
             </li>
         </ul>
+    </div>
+    <hr>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>optioins</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="insta in instagram">
+                    <td>{{insta.post}}</td>
+                    <td>{{insta.likes}}</td>
+                    <td>{{insta.dislikes}}</td>
+                    <td><input type="submit" value="Like" ng-click="incLike(insta)"></td>
+                    <td><input type="submit" value="DisLike" ng-click="incDisLike(insta)"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <hr>
 </body>
