@@ -104,7 +104,7 @@
                 <tr ng-repeat="table in table | limitTo:rowlimit">
                     <td>{{table.name | uppercase}}</td>
                     <td>{{table.DOJ|date}}</td>
-                    <td>{{table.salary | number:1}}</td>
+                    <td>{{table.salary |  currency}}</td>
                 </tr>
             </tbody>
         </table>
