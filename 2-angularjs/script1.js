@@ -73,12 +73,20 @@ var app=angular.module("module1",[]).controller("controller1",function($scope){
 
     let table=[
         {name:"Pavan1",DOJ:new Date("Jan 01 2023"),salary:4523.34},
-        {name:"Pavan2",DOJ:new Date("Jan 01 2023"),salary:4523.34},
-        {name:"Pavan3",DOJ:new Date("Jan 01 2023"),salary:4523.34},
-        {name:"Pavan4",DOJ:new Date("Jan 01 2023"),salary:4523.34},
-        {name:"Pavan5",DOJ:new Date("Jan 01 2023"),salary:4523.34}
+        {name:"Abhishek",DOJ:new Date("Jan 01 2022"),salary:3000.34},
+        {name:"Boddu",DOJ:new Date("Jan 01 2020"),salary:2000.34},
+        {name:"Kalyan",DOJ:new Date("Jan 01 2021"),salary:1000.34},
+        {name:"venkat",DOJ:new Date("Jan 01 2019"),salary:4000.34}
     ]
     $scope.table=table;
 
     $scope.rowlimit=table.length;
+
+    $scope.sortColoum="";
+    $scope.reverseCol=false;
+
+    $scope.sortData=function(coloum){
+        $scope.reverseCol=(coloum==$scope.sortColoum) ? !$scope.reverseCol :  false;
+        $scope.sortColoum=coloum;
+    }
 })

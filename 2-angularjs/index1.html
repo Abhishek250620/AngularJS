@@ -92,19 +92,24 @@
     <hr>
     <div>
         Number of rows : <input type="number" step="1" min="0" max="5" ng-model="rowlimit">
+        <select ng-model="sortColoum">
+            <option value="name">Name asc</option>
+            <option value="DOJ">DOJ asc</option>
+            <option value="salary">salary asc</option>
+        </select>
         <table border="1">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>DOJ</th>
-                    <th>Salary</th>
+                    <th ng-click="sortData(name)">Name</th>
+                    <th ng-click="sortData(DOJ)">DOJ</th>
+                    <th ng-click="sortData(slary)">Salary</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="table in table | limitTo:rowlimit">
+                <tr ng-repeat="table in table | limitTo:rowlimit | orderBy:sortColoum:reverseCol">
                     <td>{{table.name | uppercase}}</td>
                     <td>{{table.DOJ|date}}</td>
-                    <td>{{table.salary |  currency}}</td>
+                    <td>{{table.salary |  currency:"₹"}}</td>
                 </tr>
             </tbody>
         </table>
