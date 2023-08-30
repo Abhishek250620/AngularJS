@@ -89,4 +89,5 @@ var app=angular.module("module1",[]).controller("controller1",function($scope){
         $scope.reverseCol=(coloum==$scope.sortColoum) ? !$scope.reverseCol :  false;
         $scope.sortColoum=coloum;
     }
+
 })

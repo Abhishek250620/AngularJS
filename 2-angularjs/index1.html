@@ -97,6 +97,7 @@
             <option value="DOJ">DOJ asc</option>
             <option value="salary">salary asc</option>
         </select>
+        <input type="text" ng-model="search.name">
         <table border="1">
             <thead>
                 <tr>
@@ -106,7 +107,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="table in table | limitTo:rowlimit | orderBy:sortColoum:reverseCol">
+                <tr ng-repeat="table in table | limitTo:rowlimit | orderBy:sortColoum:reverseCol | filter:search">
                     <td>{{table.name | uppercase}}</td>
                     <td>{{table.DOJ|date}}</td>
                     <td>{{table.salary |  currency:"₹"}}</td>
